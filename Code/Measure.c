@@ -25,7 +25,7 @@ int main() {
     }
 
 	// setsockopt = used to control the options of this socket.
-    // Reuse the port if the server socket on was closed
+    // Reuse the port if the server socket on was closed משתמשים שוב בפורט אם הסרבר סוקט היה סגור
 	// and remains for 45 seconds in TIME-WAIT state till the final removal.
     int enable_reuse = 1;
     if(setsockopt(socket_listener, SOL_SOCKET, SO_REUSEADDR,&enable_reuse, sizeof(int)) < 0) {
