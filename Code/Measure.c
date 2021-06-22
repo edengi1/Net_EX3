@@ -14,7 +14,7 @@
 #define BUFF_SIZE 1500
 
 int main() {
-    // on linux to prevent crash on closing socket.
+    // on linux to prevent crash on closing socket .מניעת התנגשות
     signal(SIGPIPE, SIG_IGN);
     char buffer[BUFF_SIZE];
 
